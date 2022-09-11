@@ -1,7 +1,7 @@
 public class Operaciones {
     public static void main(String[] args)
     {
-        args = new String[]{"1", "3", "2", "6", "3", "4", "10", "2"};
+        args = new String[]{"9", "13", "21", "11", "8", "5", "100", "25"};
         int i = 0;
         int num1, num2,operacion;
         operacion = 1;
@@ -16,7 +16,7 @@ public class Operaciones {
             } else if (operacion == 3) {
                 System.out.println(num1+ " * " +num2+ " = " +(num1 * num2));
             } else if (operacion == 4) {
-                System.out.println(num1+ " / " +num2+ " = " +(num1 * num2));
+                System.out.println(num1+ " / " +num2+ " = " +(num1 / num2));
             }
             operacion++;
         }
