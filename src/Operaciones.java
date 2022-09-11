@@ -1,29 +1,24 @@
 public class Operaciones {
     public static void main(String[] args)
     {
-        double resultado, num1, num2;
-        for(int j = 0; j < 3; j++)
+        args = new String[]{"1", "3", "2", "6", "3", "4", "10", "2"};
+        int i = 0;
+        int num1, num2,operacion;
+        operacion = 1;
+        while(i < args.length && operacion < 5)
         {
-            for(int i = 0; i < 4; i++)
-            {
-                num1 = Math.random();
-                num2 = Math.random();
-                if(i == 0)
-                {
-                    resultado = num1 + num2;
-                    System.out.println(num1+" + "+num2+" = "+resultado);
-                } else if (i == 1) {
-                    resultado = num1 - num2;
-                    System.out.println(num1+" - "+num2+" = "+resultado);
-                } else if (i == 2) {
-                    resultado = num1 * num2;
-                    System.out.println(num1 + " * " + num2 + " = " + resultado);
-                } else {
-                    resultado = num1 / num2;
-                    System.out.println(num1 + " / " + num2 + " = " + resultado);
-                }
+            num1 = Integer.parseInt(args[i++]);
+            num2 = Integer.parseInt(args[i++]);
+            if(operacion == 1) {
+                System.out.println(num1 + " + " + num2 + " = " + (num1 + num2));
+            }else if (operacion == 2) {
+                System.out.println(num1+ " - " +num2+ " = " +(num1 - num2));
+            } else if (operacion == 3) {
+                System.out.println(num1+ " * " +num2+ " = " +(num1 * num2));
+            } else if (operacion == 4) {
+                System.out.println(num1+ " / " +num2+ " = " +(num1 * num2));
             }
-            System.out.println();
+            operacion++;
         }
     }
 }
