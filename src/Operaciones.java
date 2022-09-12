@@ -1,24 +1,26 @@
 public class Operaciones {
-    public static void main(String[] args)
-    {
-        args = new String[]{"9", "13", "21", "11", "8", "5", "100", "25"};
-        int i = 0;
-        int num1, num2,operacion;
-        operacion = 1;
-        while(i < args.length && operacion < 5)
-        {
-            num1 = Integer.parseInt(args[i++]);
-            num2 = Integer.parseInt(args[i++]);
-            if(operacion == 1) {
-                System.out.println(num1 + " + " + num2 + " = " + (num1 + num2));
-            }else if (operacion == 2) {
-                System.out.println(num1+ " - " +num2+ " = " +(num1 - num2));
-            } else if (operacion == 3) {
-                System.out.println(num1+ " * " +num2+ " = " +(num1 * num2));
-            } else if (operacion == 4) {
-                System.out.println(num1+ " / " +num2+ " = " +(num1 / num2));
+
+    public static void main(String[] args) {
+        int index = 0;
+        do {
+            String operation = args[index++];
+            int operandLeft = Integer.parseInt(args[index++]);
+            int operandRight = Integer.parseInt(args[index++]);
+            switch (operation) {
+                case "Suma":
+                    System.out.println(operandLeft + " + " + operandRight + " = " + (operandLeft + operandRight));
+                    break;
+                case "Resta":
+                    System.out.println(operandLeft + " - " + operandRight + " = " + (operandLeft - operandRight));
+                    break;
+                case "Multiplicacion":
+                    System.out.println(operandLeft + " * " + operandRight + " = " + (operandLeft * operandRight));
+                    break;
+                case "Division":
+                    System.out.println(operandLeft + " / " + operandRight + " = " + (operandLeft / operandRight));
+                    break;
             }
-            operacion++;
-        }
+        } while (index < args.length);
+    }
     }
 }
